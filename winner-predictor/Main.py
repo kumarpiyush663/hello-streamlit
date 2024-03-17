@@ -5,17 +5,18 @@
 # 		    print(lines)
 
 import pandas as pd
-df = pd.read_csv('Config/Registeration.csv')
+import streamlit as st
+#df = pd.read_csv('/Users/piyushkumar/PycharmProjects/hello-streamlit/winner-predictor/Config/Registeration.csv')
+
+df = pd.read_csv('winner-predictor/Config/Registeration.csv')
 
 
-
-print(df)
+st.dataframe(df)
 
 df.set_index("UserId", drop=True, inplace=True)
 dictionary = df.to_dict(orient="index")
 
-print(dictionary)
+# print(dictionary)
 
-print(dictionary['Dunggeon'])
 
 
