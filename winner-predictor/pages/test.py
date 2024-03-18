@@ -17,7 +17,7 @@ def log_out():
         config['cookie']['expiry_days'],
         config['preauthorized']
     )
-    authenticator.logout('Logout', 'main')
+    authenticator.logout('Logout', 'sidebar')
     # authenticator._implement_logout()
 
 
