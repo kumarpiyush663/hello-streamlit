@@ -29,6 +29,7 @@ else:
     st.divider()
     if st.button("Logout"):
         log_out()
+        st.stop()
     # with open('config.yaml') as file:
     #     config = yaml.load(file, Loader=SafeLoader)
     # # st.write(config)
