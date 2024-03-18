@@ -9,5 +9,5 @@ st.write(f'Welcome *{st.session_state["name"]}*')
 st.write("# Welcome to IPL Winner Predictor! 🏏")
 
 if st.button("Registered User"):
-    ma.generate_secret_key()
+    st.dataframe(ma.generate_secret_key())
 # authenticator.logout('Logout', 'main')
