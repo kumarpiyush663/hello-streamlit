@@ -6,7 +6,7 @@ if 'username' not in st.session_state or st.session_state["username"] == "":
     st.write(st.session_state)
     st.write(st.session_state["name"])
     st.divider()
-    st.switch_page("pages/login.py")
+    st.switch_page("login.py")
 else :
     st.set_page_config(
         page_title="Hello",
