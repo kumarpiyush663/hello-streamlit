@@ -5,6 +5,11 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
+st.set_page_config(
+        page_title="Hello",
+        page_icon="🏏",
+    )
+
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 # st.write(config)
@@ -26,21 +31,18 @@ if not st.session_state["authentication_status"]:
     # st.divider()
     st.switch_page("login.py")
 else:
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="🏏",
-    )
+
     # st.divider()
     # st.write("Inside else")
     # st.write(st.session_state)
     # st.write(st.session_state["name"])
     # st.divider()
 
+    authenticator.logout('Logout', 'main')
 
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.write("# Welcome to IPL Winner Predictor! 🏏")
 
-    authenticator.logout('Logout', 'main')
 
     # if st.button("Registered User"):
     st.dataframe(ma.get_registered_user())
