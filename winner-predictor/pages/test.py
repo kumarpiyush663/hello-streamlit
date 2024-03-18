@@ -18,17 +18,17 @@ else :
     # st.divider()
 
 
-    with open('config.yaml') as file:
-        config = yaml.load(file, Loader=SafeLoader)
-    # st.write(config)
-
-    authenticator = stauth.Authenticate(
-        config['credentials'],
-        config['cookie']['name'],
-        config['cookie']['key'],
-        config['cookie']['expiry_days'],
-        config['preauthorized']
-    )
+    # with open('config.yaml') as file:
+    #     config = yaml.load(file, Loader=SafeLoader)
+    # # st.write(config)
+    #
+    # authenticator = stauth.Authenticate(
+    #     config['credentials'],
+    #     config['cookie']['name'],
+    #     config['cookie']['key'],
+    #     config['cookie']['expiry_days'],
+    #     config['preauthorized']
+    # )
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.write("# Welcome to IPL Winner Predictor! 🏏")
 
