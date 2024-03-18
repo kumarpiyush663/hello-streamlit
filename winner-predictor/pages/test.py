@@ -6,7 +6,19 @@ import yaml
 from yaml.loader import SafeLoader
 
 def log_out():
-    st.session_state["authentication_status"] = False
+    with open('config.yaml') as file:
+        config = yaml.load(file, Loader=SafeLoader)
+    # st.write(config)
+
+    authenticator = stauth.Authenticate(
+        config['credentials'],
+        config['cookie']['name'],
+        config['cookie']['key'],
+        config['cookie']['expiry_days'],
+        config['preauthorized']
+    )
+    authenticator.logout('Logout', 'main')
+    # authenticator._implement_logout()
 
 
 # if 'username' not in st.session_state or st.session_state["username"] == "":
@@ -27,9 +39,8 @@ else:
     st.write(st.session_state)
     st.write(st.session_state["name"])
     st.divider()
-    if st.button("Logout"):
-        log_out()
-        st.stop()
+    # if st.button("Logout"):
+    log_out()
     # with open('config.yaml') as file:
     #     config = yaml.load(file, Loader=SafeLoader)
     # # st.write(config)
