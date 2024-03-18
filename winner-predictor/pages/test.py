@@ -5,7 +5,8 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
-if 'username' not in st.session_state or st.session_state["username"] == "":
+# if 'username' not in st.session_state or st.session_state["username"] == "":
+if st.session_state["authentication_status"]:
     st.divider()
     st.write("Inside if")
     st.write(st.session_state)
