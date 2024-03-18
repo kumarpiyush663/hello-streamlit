@@ -5,10 +5,6 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
-st.set_page_config(
-        page_title="Hello",
-        page_icon="🏏",
-    )
 
 # if 'username' not in st.session_state or st.session_state["username"] == "":
 if not st.session_state["authentication_status"]:
@@ -25,6 +21,10 @@ else:
     # st.write(st.session_state)
     # st.write(st.session_state["name"])
     # st.divider()
+    st.set_page_config(
+        page_title="Hello",
+        page_icon="🏏",
+    )
     with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
     # st.write(config)
