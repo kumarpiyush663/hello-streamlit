@@ -37,10 +37,11 @@ else:
     # st.divider()
 
 
-    authenticator.logout('Logout', 'main')
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.write("# Welcome to IPL Winner Predictor! 🏏")
 
-    if st.button("Registered User"):
-        st.dataframe(ma.get_registered_user())
+    authenticator.logout('Logout', 'main')
+
+    # if st.button("Registered User"):
+    st.dataframe(ma.get_registered_user())
 # authenticator.logout('Logout', 'main')
