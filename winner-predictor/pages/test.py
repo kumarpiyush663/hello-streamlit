@@ -34,11 +34,11 @@ else:
         page_title="Hello",
         page_icon="🏏",
     )
-    st.divider()
-    st.write("Inside else")
-    st.write(st.session_state)
-    st.write(st.session_state["name"])
-    st.divider()
+    # st.divider()
+    # st.write("Inside else")
+    # st.write(st.session_state)
+    # st.write(st.session_state["name"])
+    # st.divider()
     # if st.button("Logout"):
     log_out()
     # with open('config.yaml') as file:
