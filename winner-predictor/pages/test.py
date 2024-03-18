@@ -1,4 +1,5 @@
 import streamlit as st
+import Main as ma
 
 st.set_page_config(
     page_title="Hello",
@@ -6,4 +7,7 @@ st.set_page_config(
 )
 st.write(f'Welcome *{st.session_state["name"]}*')
 st.write("# Welcome to IPL Winner Predictor! 🏏")
+
+if st.button("Registered User"):
+    ma.generate_secret_key()
 # authenticator.logout('Logout', 'main')
