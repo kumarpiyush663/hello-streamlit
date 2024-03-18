@@ -7,6 +7,7 @@ from yaml.loader import SafeLoader
 
 if 'username' not in st.session_state or st.session_state["username"] == "":
     st.divider()
+    st.write("Inside if")
     st.write(st.session_state)
     st.write(st.session_state["name"])
     st.divider()
@@ -16,10 +17,11 @@ else:
         page_title="Hello",
         page_icon="🏏",
     )
-    # st.divider()
-    # st.write(st.session_state)
-    # st.write(st.session_state["name"])
-    # st.divider()
+    st.divider()
+    st.write("Inside else")
+    st.write(st.session_state)
+    st.write(st.session_state["name"])
+    st.divider()
 
     # with open('config.yaml') as file:
     #     config = yaml.load(file, Loader=SafeLoader)
