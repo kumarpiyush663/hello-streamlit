@@ -21,10 +21,7 @@ else:
     # st.write(st.session_state)
     # st.write(st.session_state["name"])
     # st.divider()
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="🏏",
-    )
+
     with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
     # st.write(config)
@@ -37,7 +34,10 @@ else:
         config['preauthorized']
     )
     authenticator.logout('Logout', 'main')
-
+    st.set_page_config(
+        page_title="Hello",
+        page_icon="🏏",
+    )
     st.write(f'Welcome *{st.session_state["name"]}*')
     st.write("# Welcome to IPL Winner Predictor! 🏏")
 
