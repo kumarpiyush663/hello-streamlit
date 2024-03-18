@@ -1,7 +1,7 @@
 import streamlit as st
 import Main as ma
 
-if 'name' not in st.session_state or st.session_state["name"] == "None":
+if 'username' not in st.session_state or st.session_state["username"] == "":
     st.switch_page("pages/login.py")
 else :
     st.set_page_config(
