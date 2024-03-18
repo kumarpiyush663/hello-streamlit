@@ -27,10 +27,11 @@ name, authentication_status, username = authenticator.login('main')
 #     st.warning('Please enter your username and password')
 
 if st.session_state["authentication_status"]:
+    st.switch_page('pages/3_DataFrame_Demo.py')
     authenticator.logout('Logout', 'main')
     # st.write(f'Welcome *{st.session_state["name"]}*')
     # st.title('Some content')
-    st.switch_page("pages/test.py",)
+    st.switch_page("winner-predictor/Main.py")
 elif st.session_state["authentication_status"] == False:
     st.error('Username/password is incorrect')
 elif st.session_state["authentication_status"] == None:
