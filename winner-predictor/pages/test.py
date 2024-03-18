@@ -5,6 +5,9 @@ import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
 
+def log_out():
+    st.session_state["authentication_status"] = False
+
 
 # if 'username' not in st.session_state or st.session_state["username"] == "":
 if not st.session_state["authentication_status"] or st.session_state['authentication_status'] is None:
@@ -24,7 +27,8 @@ else:
     st.write(st.session_state)
     st.write(st.session_state["name"])
     st.divider()
-
+    if st.button("Logout"):
+        log_out()
     # with open('config.yaml') as file:
     #     config = yaml.load(file, Loader=SafeLoader)
     # # st.write(config)
