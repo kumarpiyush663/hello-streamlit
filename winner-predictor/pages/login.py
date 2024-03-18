@@ -5,7 +5,7 @@ import yaml
 from yaml.loader import SafeLoader
 with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
- st.write(config)
+st.write(config)
 
 authenticator = stauth.Authenticate(
     config['credentials'],
