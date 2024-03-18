@@ -23,11 +23,11 @@ def log_out():
 
 # if 'username' not in st.session_state or st.session_state["username"] == "":
 if not st.session_state["authentication_status"] or st.session_state['authentication_status'] is None:
-    st.divider()
-    st.write("Inside if")
-    st.write(st.session_state)
-    st.write(st.session_state["name"])
-    st.divider()
+    # st.divider()
+    # st.write("Inside if")
+    # st.write(st.session_state)
+    # st.write(st.session_state["name"])
+    # st.divider()
     st.switch_page("login.py")
 else:
     st.set_page_config(
