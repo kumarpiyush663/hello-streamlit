@@ -6,8 +6,12 @@ import yaml
 from yaml.loader import SafeLoader
 
 if 'username' not in st.session_state or st.session_state["username"] == "":
+    st.divider()
+    st.write(st.session_state)
+    st.write(st.session_state["name"])
+    st.divider()
     st.switch_page("login.py")
-else :
+else:
     st.set_page_config(
         page_title="Hello",
         page_icon="🏏",
@@ -16,7 +20,6 @@ else :
     # st.write(st.session_state)
     # st.write(st.session_state["name"])
     # st.divider()
-
 
     # with open('config.yaml') as file:
     #     config = yaml.load(file, Loader=SafeLoader)
