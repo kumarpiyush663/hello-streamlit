@@ -15,16 +15,16 @@ if not st.session_state["authentication_status"] or st.session_state['authentica
     st.divider()
     st.switch_page("login.py")
 else:
-
+    st.set_page_config(
+        page_title="Hello",
+        page_icon="🏏",
+    )
     st.divider()
     st.write("Inside else")
     st.write(st.session_state)
     st.write(st.session_state["name"])
     st.divider()
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="🏏",
-    )
+
     with open('config.yaml') as file:
         config = yaml.load(file, Loader=SafeLoader)
     # st.write(config)
