@@ -12,13 +12,6 @@ else :
         page_title="Hello",
         page_icon="🏏",
     )
-    authenticator = stauth.Authenticate(
-        config['credentials'],
-        config['cookie']['name'],
-        config['cookie']['key'],
-        config['cookie']['expiry_days'],
-        config['preauthorized']
-    )
     # st.divider()
     # st.write(st.session_state)
     # st.write(st.session_state["name"])
