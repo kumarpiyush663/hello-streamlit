@@ -30,7 +30,7 @@ if st.session_state["authentication_status"]:
     # authenticator.logout('Logout', 'sidebar')
     authenticator.logout('Logout', 'main')
     # if st.button("Registered User"):
-    st.switch_page('pages/test.py')
+    # st.switch_page('pages/test.py')
     # authenticator.logout('Logout', 'main')
     # st.switch_page('pages/3_DataFrame_Demo.py')
     # authenticator.logout('Logout', 'main')
