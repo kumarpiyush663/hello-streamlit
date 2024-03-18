@@ -28,7 +28,7 @@ name, authentication_status, username = authenticator.login('main')
 
 if st.session_state["authentication_status"]:
     st.switch_page('pages/test.py')
-    authenticator.logout('Logout', 'main')
+    # authenticator.logout('Logout', 'main')
     # st.switch_page('pages/3_DataFrame_Demo.py')
     # authenticator.logout('Logout', 'main')
     # st.write(f'Welcome *{st.session_state["name"]}*')
@@ -38,3 +38,7 @@ elif st.session_state["authentication_status"] == False:
     st.error('Username/password is incorrect')
 elif st.session_state["authentication_status"] == None:
     st.warning('Please enter your username and password')
+
+    # Saving config file
+    with open('../config.yaml', 'w') as file:
+        yaml.dump(config, file, default_flow_style=False)

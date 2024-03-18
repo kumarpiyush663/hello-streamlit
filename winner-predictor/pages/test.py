@@ -6,3 +6,4 @@ st.set_page_config(
 )
 st.write(f'Welcome *{st.session_state["name"]}*')
 st.write("# Welcome to IPL Winner Predictor! 🏏")
+authenticator.logout('Logout', 'main')
