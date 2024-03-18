@@ -45,9 +45,9 @@ elif st.session_state["authentication_status"] == None:
 with open('config.yaml', 'w') as file:
     yaml.dump(config, file, default_flow_style=False)
 
-if st.session_state["authentication_status"]:
-    try:
-        if authenticator.update_user_details(st.session_state["username"]):
-            st.success('Entries updated successfully')
-    except Exception as e:
-        st.error(e)
+# if st.session_state["authentication_status"]:
+#     try:
+#         if authenticator.update_user_details(st.session_state["username"]):
+#             st.success('Entries updated successfully')
+#     except Exception as e:
+#         st.error(e)
