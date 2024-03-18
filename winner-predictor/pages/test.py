@@ -4,6 +4,10 @@ import Main as ma
 if 'name' not in st.session_state or st.session_state["name"] == "None":
     st.switch_page("pages/login.py")
 else :
+    st.divider()
+    st.write(st.session_state)
+    st.write(st.session_state["name"])
+    st.divider()
     st.set_page_config(
         page_title="Hello",
         page_icon="🏏",
